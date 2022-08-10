@@ -4,6 +4,8 @@ const orderschema=new mongoose.Schema ({
    
     customer_id:{
 type:String
+
+as
     },
     inventory_id:{
 type:String
