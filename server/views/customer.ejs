@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    <style>
+        table {
+            font-family: Arial, Helvetica, sans-serif;
+            /* border-collapse: collapse; */
+            width: 100%;
+            border: 1px solid brown;
+            margin-left: 2px;
+        }
+
+        td,
+        th {
+            border: 2px solid brown;
+            text-align: left;
+            padding: 10px;
+        }
+
+        tr {
+            padding: auto;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        #mainpage {
+            background-color: hotpink;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="mainpage">
+        <h1>Customer table</h1>
+        <table>
+            <tr>
+                <th>customer_id</th>
+                <th>customer_name</th>
+                <th>email</th>
+            </tr>
+            <%for(let i=0;i<data.length;i++){%>
+                <tr>
+                    <td>
+                        <%=data[i].customer_id%>
+                    </td>
+                    <td>
+                        <%=data[i].customer_name%>
+                    </td>
+                    <td>
+                        <%=data[i].email%>
+                    </td>
+                </tr>
+                <% }%>
+        </table>
+    </div>
+</body>
+
+</html>

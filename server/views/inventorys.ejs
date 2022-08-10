@@ -1,0 +1,50 @@
+
+<html>
+  <head>
+      <style>
+          table{
+              font-family: Arial, Helvetica, sans-serif;
+              /* border-collapse: collapse; */
+              width:100%;
+              border:1px solid brown;
+              margin-left: 2px;
+          }
+          td,th{
+              border: 2px solid brown;
+              text-align: left;
+              padding: 10px;
+          }
+          tr{
+              padding: auto;
+          }
+          h1{
+              text-align: center;
+          }
+          #mainpage{
+              background-color: hotpink;
+          }
+      </style>
+  </head>
+  <body>
+      <div id="mainpage">
+          <h1>inventory table</h1>
+          <table>
+              <tr>
+                  <th>inventory_id</th>
+                  <th>inventory_type</th>
+                  <th>item_name</th>
+                  <th>available_quantity</th>
+              </tr>
+             
+                 <%for(let i=0;i<data.length;i++){%>
+                  <tr>
+                      <td><%=data[i].inventory_id%></td>
+                      <td><%=data[i].inventory_type%></td>
+                      <td><%=data[i].item_name%></td>
+                      <td><%=data[i].available_quantity%></td>
+                  </tr>
+           <% }%>
+          </table>
+      </div>
+  </body>
+</html>
