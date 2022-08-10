@@ -85,6 +85,13 @@ app.post("/order", (req, res) => {
 
     })
 
+    app.get("/orderp",(req,res)=>{
+        orderModal.find().then((data)=>{
+            res.render("order",{data})
+    
+        })
+    })
+
 
 
 
